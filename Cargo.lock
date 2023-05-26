@@ -12,7 +12,8 @@ checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 name = "chat-gpt-ideas"
 version = "0.1.0"
 dependencies = [
- "rand",
+ "guessing_game",
+ "temp_conv",
 ]
 
 [[package]]
@@ -24,6 +25,13 @@ dependencies = [
  "cfg-if",
  "libc",
  "wasi",
+]
+
+[[package]]
+name = "guessing_game"
+version = "0.1.0"
+dependencies = [
+ "rand",
 ]
 
 [[package]]
@@ -67,6 +75,10 @@ checksum = "ec0be4795e2f6a28069bec0b5ff3e2ac9bafc99e6a9a7dc3547996c5c816922c"
 dependencies = [
  "getrandom",
 ]
+
+[[package]]
+name = "temp_conv"
+version = "0.1.0"
 
 [[package]]
 name = "wasi"

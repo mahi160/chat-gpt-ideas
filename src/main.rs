@@ -1,11 +1,22 @@
 #![allow(unused)]
-mod guessing_game;
-mod temp_converter;
-
-use crate::guessing_game::guessing_game;
-use crate::temp_converter::temp_converter;
+use guessing_game::guessing_game;
+use std::io;
+use temp_conv::temp_conv;
 fn main() {
-    // guessing_game();
+    println!("Hello, world! These are my first rust projects! Please select one to use!");
+    let choices = [(1, "Guessing Game"), (2, "Temperature Conversion")];
+    for elm in choices.iter() {
+        println!("{}: {}", elm.0, elm.1);
+    }
 
-    temp_converter(30.4, 'C');
+    let mut choice = String::new();
+    io::stdin()
+        .read_line(&mut choice)
+        .expect("Please enter a valid number");
+    let choice: i32 = choice.trim().parse::<i32>().unwrap();
+    match choice {
+        1 => guessing_game(),
+        2 => temp_conv(30.4, 'C'),
+        _ => println!("Please enter a valid number"),
+    };
 }
