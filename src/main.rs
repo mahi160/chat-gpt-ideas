@@ -16,7 +16,7 @@ fn main() {
     let choice: i32 = choice.trim().parse::<i32>().unwrap();
     match choice {
         1 => guessing_game(),
-        2 => temp_conv(30.4, 'C'),
+        2 => temp_conv(),
         _ => println!("Please enter a valid number"),
     };
 }
