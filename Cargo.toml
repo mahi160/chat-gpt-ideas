@@ -8,4 +8,3 @@ edition = "2021"
 guessing_game = { path = "./src/libs/guessing_game" }
 temp_conv = { path = "./src/libs/temp_conv" }
 currency_converter = { path = "./src/libs/currency_converter" }
-fetch = { path = "./src/helpers/fetch" }

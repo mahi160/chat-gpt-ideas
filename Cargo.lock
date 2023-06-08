@@ -49,7 +49,6 @@ name = "chat-gpt-ideas"
 version = "0.1.0"
 dependencies = [
  "currency_converter",
- "fetch",
  "guessing_game",
  "temp_conv",
 ]
