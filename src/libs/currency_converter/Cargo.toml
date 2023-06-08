@@ -1,0 +1,8 @@
+[package]
+name = "currency_converter"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+dotenv = "0.15.0"
+fetch = { path = "../../helpers/fetch" }
