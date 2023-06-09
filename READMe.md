@@ -17,22 +17,52 @@
 - [ ] **Simple Web Scraper**: Develop a program that extracts specific information from a website. For example, scrape news headlines or stock prices from a website and display them.
 
 # What I Learned so far
+
 ## Variables
+
 - Defined with `let` keyword.
 - Variable names should be `snake_case`
 - _Immutable_ by default, ie. can not change the value. use `mut` keyword to make it immutable
 - Constant is defined by `const`. Name should be `UPPER_SNAKE_CASE`. Must give type at declaration. `const A_CONSTANT: i32 = 30`
 - _Shadowing_: Redefine a variable again with `let` keyword.
+
 ```rust
 let a = 10;
 // some code
 let a = 20; // shadowing
 ```
+
 ## Functions
+
+- Declares by `fn` keyword. Return value is denoted by `->`
+- Return value can be done two way. With `return` keyword & without.
+
+```rust
+fn way_one() {
+  return "Hello"
+}
+fn way_two() {
+  "Hello"
+}
+```
+
+## Ownership and Borrowing
+
+- When a variable is declared, it takes the ownership of the data.
+
 ## Library
+
 - To create a library run `cargo new /path/to/lib --lib`
 - To use that dependency add the lib as `lib_name = { path = "/path/to/lib" }` in `Cargo.toml` file
 - Functions of the lib _(that would be used in other files)_ should have `pub` keyword in front of them.
 
-## Tokio
 ## HTTP Calls
+
+- Use `reqwest` crate.
+- Function calling http requests must return `Request<Value<T>, Error>`. Generally used `ok(())`.
+- For `async await` use `tokio` crate
+
+## Tokio
+
+- To use a `async await`, use `tokio`.
+- It is used ase `#[tokio::main]` before the function. **NEED FURTHER ANALYSIS**
