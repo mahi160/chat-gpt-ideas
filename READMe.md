@@ -46,6 +46,18 @@ fn way_two() {
 }
 ```
 
+- If an argument of function is optional, use `Option<T>`. When using that function, must use `Some()`.
+- To check a an `Option` _(enum)_ has a value, use `is_some()`
+
+```rust
+fn a_function(x: Option<i32>) -> i32 {
+  if x.is_some() {
+    x
+  }
+}
+a_function(Some(43));
+```
+
 ## Ownership and Borrowing
 
 - When a variable is declared, it takes the ownership of the data.

@@ -24,7 +24,7 @@ fn main() {
         println!("{}: {}", elm.0, elm.1);
     }
 
-    let choice = take_input("").trim().parse().unwrap();
+    let choice = take_input(None).trim().parse().unwrap();
 
     match choice {
         1 => currency_converter::run(),
