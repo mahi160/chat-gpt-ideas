@@ -9,19 +9,19 @@ pub fn guessing_game() {
     println!("Guess a number between 1 and 100. You will get 5 chances!");
 
     loop {
-        let mut guess = String::new();
-        println!("Guess: ");
-
-        input.read_line(&mut guess).expect("Failed to read line");
-        let guess: u32 = guess.trim().parse().unwrap();
-
-        if count > 5 {
+        if count == 5 {
             println!("You Lose! The number is {}", random_number);
             break;
         }
+
+        let mut guess = String::new();
+        println!("Guess {}: ", count + 1);
+        input.read_line(&mut guess).expect("Failed to read line");
+        let guess: u32 = guess.trim().parse().unwrap();
+
         match guess.cmp(&random_number) {
             Ordering::Equal => {
-                println!("You win!");
+                println!("You win & it took you {} guesses!", count + 1);
                 break;
             }
             Ordering::Greater => println!("Too High!"),
@@ -29,8 +29,4 @@ pub fn guessing_game() {
         }
         count += 1;
     }
-    println!(
-        "The number was {} & it took you {} guesses!",
-        random_number, count
-    );
 }
