@@ -1,7 +1,7 @@
 use rand::{self, Rng};
 use std::{cmp::Ordering, io};
 
-pub fn guessing_game() {
+pub fn run() {
     let random_number: u32 = rand::thread_rng().gen_range(1..=100);
     let input = io::stdin();
     let mut count = 0;

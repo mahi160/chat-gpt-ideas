@@ -46,11 +46,17 @@ checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
 name = "chat-gpt-ideas"
-version = "0.1.0"
+version = "0.1.3"
 dependencies = [
  "currency_converter",
+ "file_analyzer",
  "guessing_game",
  "temp_conv",
+ "todo_list",
+ "url_shortener",
+ "utils",
+ "web_scrapper",
+ "word_count",
 ]
 
 [[package]]
@@ -75,6 +81,7 @@ version = "0.1.0"
 dependencies = [
  "dotenv",
  "fetch",
+ "utils",
 ]
 
 [[package]]
@@ -130,6 +137,10 @@ dependencies = [
  "serde_json",
  "tokio",
 ]
+
+[[package]]
+name = "file_analyzer"
+version = "0.1.0"
 
 [[package]]
 name = "fnv"
@@ -840,6 +851,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1f3ccbac311fea05f86f61904b462b55fb3df8837a366dfc601a0161d0532f20"
 
 [[package]]
+name = "todo_list"
+version = "0.1.0"
+
+[[package]]
 name = "tokio"
 version = "1.28.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -958,6 +973,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "url_shortener"
+version = "0.1.0"
+
+[[package]]
+name = "utils"
+version = "0.1.0"
+
+[[package]]
 name = "vcpkg"
 version = "0.2.15"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1054,6 +1077,10 @@ dependencies = [
  "js-sys",
  "wasm-bindgen",
 ]
+
+[[package]]
+name = "web_scrapper"
+version = "0.1.0"
 
 [[package]]
 name = "winapi"
@@ -1232,3 +1259,7 @@ checksum = "80d0f4e272c85def139476380b12f9ac60926689dd2e01d4923222f40580869d"
 dependencies = [
  "winapi",
 ]
+
+[[package]]
+name = "word_count"
+version = "0.1.0"

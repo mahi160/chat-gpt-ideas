@@ -1,10 +1,16 @@
 [package]
 name = "chat-gpt-ideas"
-version = "0.1.0"
+version = "0.1.3"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [dependencies]
+currency_converter = { path = "./src/libs/currency_converter" }
+file_analyzer = { path = "./src/libs/file_analyzer" }
 guessing_game = { path = "./src/libs/guessing_game" }
 temp_conv = { path = "./src/libs/temp_conv" }
-currency_converter = { path = "./src/libs/currency_converter" }
+todo_list = { path = "./src/libs/todo_list" }
+url_shortener = { path = "./src/libs/url_shortener" }
+web_scrapper = { path = "./src/libs/web_scrapper" }
+word_count = { path = "./src/libs/word_count" }
+
+utils = { path = "./src/helpers/utils" }

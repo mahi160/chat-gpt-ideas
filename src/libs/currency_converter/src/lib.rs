@@ -1,6 +1,6 @@
 use dotenv::dotenv;
-use fetch;
-use std::io;
+use fetch::get;
+use utils::take_input;
 
 pub fn run() {
     dotenv().ok();
@@ -13,19 +13,10 @@ pub fn run() {
 
     let url = format!("{}/{}/pair/{}/{}/{}", host, api_key, from, to, amount);
 
-    let response = fetch::get(&url).unwrap();
+    let response = get(&url).unwrap();
     let result = response["conversion_result"].as_f64().unwrap();
     println!(
         "As of today's Exchange Rate, {:.2} {} is {:.2} {}!",
         amount, from, result, to
     );
-}
-
-fn take_input(text: &str) -> String {
-    let mut var = String::new();
-    println!("{}", text);
-    io::stdin()
-        .read_line(&mut var)
-        .expect("Could not read data.");
-    var
 }

@@ -1,28 +1,40 @@
-#![allow(unused)]
 use currency_converter;
-use guessing_game::guessing_game;
-use std::io;
-use temp_conv::temp_conv;
+use file_analyzer;
+use guessing_game;
+use temp_conv;
+use todo_list;
+use url_shortener;
+use web_scrapper;
+use word_count;
+
+use utils::take_input;
 fn main() {
     println!("Hello, world! These are my first rust projects! Please select one to use!");
     let choices = [
-        (1, "Guessing Game"),
-        (2, "Temperature Conversion"),
-        (3, "Currency Converter"),
+        (1, "Currency Converter"),
+        (2, "File Analyzer"),
+        (3, "Guessing Game"),
+        (4, "Temperature Conversion"),
+        (5, "Todo List"),
+        (6, "URL Shortener"),
+        (7, "Web Scrapper"),
+        (8, "Word Count"),
     ];
     for elm in choices.iter() {
         println!("{}: {}", elm.0, elm.1);
     }
 
-    let mut choice = String::new();
-    io::stdin()
-        .read_line(&mut choice)
-        .expect("Please enter a valid number");
-    let choice: i32 = choice.trim().parse::<i32>().unwrap();
+    let choice = take_input("").trim().parse().unwrap();
+
     match choice {
-        1 => guessing_game(),
-        2 => temp_conv(),
-        3 => currency_converter::run(),
+        1 => currency_converter::run(),
+        2 => file_analyzer::run(),
+        3 => guessing_game::run(),
+        4 => temp_conv::run(),
+        5 => todo_list::run(),
+        6 => url_shortener::run(),
+        7 => web_scrapper::run(),
+        8 => word_count::run(),
         _ => println!("Please enter a valid number"),
     };
 }

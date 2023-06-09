@@ -1,5 +1,5 @@
 use std::io;
-pub fn temp_conv() {
+pub fn run() {
     println!("Enter temperature:");
     let mut temp = String::new();
     io::stdin()
