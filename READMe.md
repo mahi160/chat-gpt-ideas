@@ -12,6 +12,27 @@
 
 - [ ] **File Analyzer**: Write a program that analyzes a given file and provides various statistics such as the total number of lines, words, and characters. You can also calculate the frequency of each word and display the most common ones.
 
-- [ ] **Currency Converter**: Build a currency converter that allows users to convert between different currencies. Retrieve exchange rates from an API or use predefined rates.
+- [x] **Currency Converter**: Build a currency converter that allows users to convert between different currencies. Retrieve exchange rates from an API or use predefined rates.
 
 - [ ] **Simple Web Scraper**: Develop a program that extracts specific information from a website. For example, scrape news headlines or stock prices from a website and display them.
+
+# What I Learned so far
+## Variables
+- Defined with `let` keyword.
+- Variable names should be `snake_case`
+- _Immutable_ by default, ie. can not change the value. use `mut` keyword to make it immutable
+- Constant is defined by `const`. Name should be `UPPER_SNAKE_CASE`. Must give type at declaration. `const A_CONSTANT: i32 = 30`
+- _Shadowing_: Redefine a variable again with `let` keyword.
+```rust
+let a = 10;
+// some code
+let a = 20; // shadowing
+```
+## Functions
+## Library
+- To create a library run `cargo new /path/to/lib --lib`
+- To use that dependency add the lib as `lib_name = { path = "/path/to/lib" }` in `Cargo.toml` file
+- Functions of the lib _(that would be used in other files)_ should have `pub` keyword in front of them.
+
+## Tokio
+## HTTP Calls
