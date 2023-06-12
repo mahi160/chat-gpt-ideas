@@ -48,6 +48,7 @@ fn way_two() {
 
 - If an argument of function is optional, use `Option<T>`. When using that function, must use `Some()`.
 - To check a an `Option` _(enum)_ has a value, use `is_some()`
+- To get the value of type `T`, use `unwrap()` or `expect()`
 
 ```rust
 fn a_function(x: Option<i32>) -> i32 {
