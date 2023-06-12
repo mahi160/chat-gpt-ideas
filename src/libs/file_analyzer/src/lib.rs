@@ -7,7 +7,6 @@
  * - Occurrence of same letter
  * - Find a letter / word and how many times that is.
  */
-use utils;
 pub fn run() {
     println!("Welcome to File Analyzer. This will analyze a .txt file and give some stats on it.");
     // let path = "test.txt";
