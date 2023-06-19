@@ -1,6 +1,7 @@
 use currency_converter;
 use file_analyzer;
 use guessing_game;
+use std::time::Instant;
 use temp_conv;
 use todo_list;
 use url_shortener;
@@ -26,6 +27,7 @@ fn main() {
 
     let choice = take_input(None).trim().parse().unwrap();
 
+    let start_time = Instant::now();
     match choice {
         1 => currency_converter::run(),
         2 => file_analyzer::run(),
@@ -37,4 +39,8 @@ fn main() {
         8 => word_count::run(),
         _ => println!("Please enter a valid number"),
     };
+    let end_time = Instant::now();
+    let elapsed_time = end_time - start_time;
+
+    println!("Elapsed time: {:?}", elapsed_time);
 }

@@ -4,7 +4,7 @@
 
 - [ ] **Todo List**: Build a basic todo list application where users can add, update, and remove tasks. You can store the tasks in memory or use a file-based approach to persist the data.
 
-- [ ] **Word Count**: Write a program that reads a text file and counts the occurrences of each word. It can display the results in a sorted manner, showing the most frequent words first.
+- [x] **Word Count**: Write a program that reads a text file and counts the occurrences of each word. It can display the results in a sorted manner, showing the most frequent words first.
 
 - [x] **Temperature Converter**: Develop a program that converts temperatures between Celsius, Fahrenheit, and Kelvin. Allow the user to enter a temperature in one unit and convert it to the other units.
 
